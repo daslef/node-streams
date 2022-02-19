@@ -4,6 +4,14 @@
 
 A workshop on Node.js Streams by Luciano Mammino ([@loige](https://twitter.com/loige)). 🤓
 
+## Want to participate to this workshop in a class with an instructor?
+
+I am hosting a workshop class at CityJS on the 23rd March, 2022! 🙌
+
+[![CityJS conference 2022](https://i.postimg.cc/HxB6pVBx/Screenshot-2022-02-19-at-11-03-57.png)](https://cityjsconf.org/)
+
+[ 👉  Get your tickets here  👈 ](https://cityjsconf.org/buytickets/)
+
 
 ## Prerequisites
 

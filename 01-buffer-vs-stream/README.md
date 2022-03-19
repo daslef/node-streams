@@ -211,7 +211,7 @@ If you are curious to look at source files you can checkout [`buffer-copy-profil
 Finally we can run the following command to see how the buffer based implementation behaves:
 
 ```bash
-time node 01-buffer-vs-stream/buffer-copy-profile.js assets/600mb.bin assets/600mb.bin_copy
+time node 01-buffer-vs-stream/buffer-copy-profile.js assets/600mb.bin assets/600mb_copy.bin
 ```
 
 With this command we should see something similar to the following output:
@@ -241,7 +241,7 @@ With this command we should see something similar to the following output:
   600.4537 Mb
   600.7435 Mb
   600.2381 Mb
-assets/600mb.bin copied into assets/600mb.bin_copy
+assets/600mb.bin copied into assets/600mb_copy.bin
 
 real	0m4.321s
 user	0m1.864s
@@ -253,7 +253,7 @@ As expected the buffered version is allocating around 600 Mb of data in memory (
 If we run the stream version instead:
 
 ```bash
-time node 01-buffer-vs-stream/stream-copy-profile.js assets/600mb.bin assets/600mb.bin_copy
+time node 01-buffer-vs-stream/stream-copy-profile.js assets/600mb.bin assets/600mb_copy.bin
 ```
 
 In this case we should see something like:
@@ -277,7 +277,7 @@ In this case we should see something like:
    11.1969 Mb
     2.2594 Mb
     9.3219 Mb
-assets/600mb.bin copied into assets/600mb.bin_copy
+assets/600mb.bin copied into assets/600mb_copy.bin
 
 real	0m1.984s
 user	0m0.574s

@@ -84,7 +84,7 @@ But did you ever wonder what happens when you try to copy a big file (let's say 
 > Generate a big file (3gb) called `assets/3Gb.bin` in your machine with:
 >
 > ```bash
-> head -c $((3*1024*1024*1024)) /dev/urandom > assets/3Gb.bin
+> head -c 3221225472 /dev/urandom > assets/3Gb.bin
 > ```
 >
 > Be patient, this might take a bit...
@@ -199,7 +199,7 @@ This will give us the number of bytes allocated for buffers.
 Before we can start to do some tests let's create a 600Mb file called `assets/600mb.bin`:
 
 ```bash
-head -c $((600*1024*1024)) /dev/urandom > assets/600mb.bin
+head -c 629145600 /dev/urandom > assets/600mb.bin
 ```
 
 This might take few minutes... be patient, please.

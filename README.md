@@ -17,8 +17,8 @@ I am hosting a **REMOTE** workshop class at CityJS on the 23rd March, 2022! 🙌
 
 Before getting started, make sure you have the following prerequisites in your system:
 
-- Node.js 14.16+
-- NPM 6.9.0+
+- Node.js 16.14+
+- NPM 8.3+
 - a text editor of your choice
 - a bash-compatible shell (if you use Windows you can [install bash](https://www.windowscentral.com/how-install-bash-shell-command-line-windows-10) or use Docker, as [described below](#using-docker))
 

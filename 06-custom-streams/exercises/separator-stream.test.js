@@ -38,7 +38,7 @@ tap.test('It should proper separator between chunks', function (t) {
         throw err
       }
 
-      t.deepEqual(data, EXPECTED)
+      t.same(data, EXPECTED)
       t.end()
     }
   )

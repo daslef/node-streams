@@ -35,7 +35,7 @@ tap.test('It should output the correct sequence of fib numbers smaller than 20',
         throw err
       }
 
-      t.deepEqual(accumulator.getData(), EXPECTED)
+      t.same(accumulator.getData(), EXPECTED)
       t.end()
     }
   )

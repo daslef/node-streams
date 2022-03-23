@@ -30,9 +30,9 @@ tap.test('it should respond with uppercasified body', function (t) {
 
   req.on('end', () => {
     const callArgs = res.write.getCalls().flatMap(x => x.args)
-    t.deepEqual(callArgs, ['HELLO ', 'WORLD'], 'Uppercasified the data in the request')
-    t.true(res.once.called, 'Handling backpressure')
-    t.true(res.end.calledOnce, 'Closing the response')
+    t.same(callArgs, ['HELLO ', 'WORLD'], 'Uppercasified the data in the request')
+    t.ok(res.once.called, 'Handling backpressure')
+    t.ok(res.end.calledOnce, 'Closing the response')
     t.end()
   })
 })

@@ -77,7 +77,7 @@ tap.test('It encrypts and compress some data properly', function (t) {
       const encryptedData = dest.getData()
       const decryptedData = await decrypt(encryptedData, SECRET, IV)
 
-      t.deepEqual(decryptedData, CLEAN_DATA)
+      t.same(decryptedData, CLEAN_DATA)
       t.end()
     }
   )
@@ -98,7 +98,7 @@ tap.test('It decompress and decrypts some data properly', function (t) {
       }
 
       const data = dest.getData()
-      t.deepEqual(data, CLEAN_DATA)
+      t.same(data, CLEAN_DATA)
       t.end()
     }
   )

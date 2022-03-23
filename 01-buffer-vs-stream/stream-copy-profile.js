@@ -3,6 +3,8 @@ import {
   createWriteStream
 } from 'fs'
 
+const start = performance.now()
+
 const profile = setInterval(() => {
   console.error(`${(process.memoryUsage().arrayBuffers / 1024 / 1024).toFixed(4).padStart(10)} Mb`)
 }, 100)
@@ -17,6 +19,7 @@ const destStream = createWriteStream(dest)
 
 const s = srcStream.pipe(destStream)
 s.on('finish', () => {
-  console.log(`${src} copied into ${dest}`)
+  const end = performance.now()
+  console.log(`${src} copied into ${dest}\nTime Taken: ${(end - start) / 1000} secs`)
   clearInterval(profile)
 })

@@ -153,7 +153,7 @@ We will see later how to use this stream in combination with a Transform stream.
 
 ## 06.3 Custom Transform streams
 
-Creating custom Transform streams is unsurprisingly similar to creating custom Readable streams. Also in this case it's just a matter of extending the `Transform` class. This time though, we have to implement the `_tranform` method which accepts 3 arguments:
+Creating custom Transform streams is unsurprisingly similar to creating custom Readable streams. Also in this case it's just a matter of extending the `Transform` class. This time though, we have to implement the `_transform` method which accepts 3 arguments:
 
  - `chunk`: the current chunk of data to transform
  - `enc`: a string that represents the current encoding of the data

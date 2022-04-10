@@ -97,6 +97,20 @@ file.on('error', err => console.error(`Error reading file: ${err}`))
 > **🎭 PLAY**  
 > Play with this script a bit and try to run it against some of the emoji art files available in the [`assets`](/assets) folder. You should see the same results as before!
 
+> **✏️ Tip**
+>
+> When you call `readable.read(numBytes)` you can optionally pass an argument indicating how many bytes you would like to read. This can be useful when
+> dealing with streaming binary protocols.
+> 
+> ```javascript
+> const myFloat = readable.read(4).readFloatBE()
+> ```
+> 
+> In this example we are reading 4 bytes from the stream. This will return the bytes in a `Buffer`. We can then read the data as a 32-bit, big-endian float using the `readFloatBE`() method of the `Buffer` class.
+> 
+> Keep in mind that you are not guaranteed to have 4 bytes ready to be consumed (there might be fewer bytes in the readable buffer or the stream might
+> have terminated earlier), so in production code, make sure to check the lenght of the buffer being returned to make sure you got enough bytes. 
+
 
 ## 02.4 Mode switch conditions
 

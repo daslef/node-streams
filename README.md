@@ -4,6 +4,7 @@
 
 A workshop on Node.js Streams by Luciano Mammino ([@loige](https://twitter.com/loige)). 🤓
 
+> I also have a workshop about [JavaScript Iteration Protocols](https://github.com/lmammino/iteration-protocols-workshop).
 
 ## Prerequisites
 

@@ -3,10 +3,7 @@ import { createGunzip } from 'zlib'
 import { join } from 'desm'
 import tap from 'tap'
 
-import countWordsSolution from './count-words.solution.js'
-import countWordsTpl from './count-words.js'
-
-const countWords = process.env.TEST_SOLUTIONS ? countWordsSolution : countWordsTpl
+import countWords from './count-words.js'
 
 tap.test('It should count the right number of words', async function (t) {
   const filePath = join(import.meta.url, '..', '..', 'assets', 'moby-dick.txt.gz')

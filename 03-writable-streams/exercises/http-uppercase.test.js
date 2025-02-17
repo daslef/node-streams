@@ -2,10 +2,7 @@ import MockReq from 'mock-req'
 import tap from 'tap'
 import sinon from 'sinon'
 
-import makeServerSolution from './http-uppercase.solution.js'
-import makeServerTpl from './http-uppercase.js'
-
-const makeServer = process.env.TEST_SOLUTIONS ? makeServerSolution : makeServerTpl
+import makeServer from './http-uppercase.js'
 
 tap.test('it should respond with uppercasified body', function (t) {
   const server = makeServer()
@@ -20,7 +17,7 @@ tap.test('it should respond with uppercasified body', function (t) {
 
   const res = sinon.spy({
     write: () => false,
-    end: () => {},
+    end: () => { },
     once: (_, cb) => { cb() }
   })
 

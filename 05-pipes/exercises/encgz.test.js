@@ -1,11 +1,7 @@
 import { Readable, Writable, pipeline } from 'readable-stream'
 import tap from 'tap'
-import * as solution from './encgz.solution.js'
-import * as tpl from './encgz.js'
 
-const [createEncgz, createDecgz] = process.env.TEST_SOLUTIONS
-  ? [solution.createEncgz, solution.createDecgz]
-  : [tpl.createEncgz, tpl.createDecgz]
+import { createEncgz, createDecgz } from './encgz.js'
 
 const SECRET = Buffer.from('Elbert Hubbard')
 const IV = Buffer.from('9fab79663db375c8439cc38ffa9239fd', 'hex')
@@ -13,29 +9,29 @@ const CLEAN_DATA = Buffer.from('One machine can do the work of fifty ordinary me
 const ENCRYPTED_DATA = Buffer.from('H4sIAAAAAAAAEwFwAI//Q43rjDMahJx4q16eVFh9wKV74ZKAdLQkMF1/7k4iihWhwNRKM1XJlqwvX+GQ8t7dWQNfvSoco6JXfz81GFJq67VURppdpNMSVuvZrdONx0a/0pf0WppckaOFicWsAy6pwgle/otKo/vz+XK7Mhqz8sy1rENwAAAA', 'base64')
 
 class BufferStream extends Readable {
-  constructor (buffer, options) {
+  constructor(buffer, options) {
     super(options)
     this.buffer = buffer
   }
 
-  _read () {
+  _read() {
     this.push(this.buffer)
     this.push(null)
   }
 }
 
 class Accumulator extends Writable {
-  constructor (options) {
+  constructor(options) {
     super(options)
     this.data = Buffer.alloc(0)
   }
 
-  _write (chunk, enc, done) {
+  _write(chunk, enc, done) {
     this.data = Buffer.concat([this.data, chunk])
     done()
   }
 
-  getData () {
+  getData() {
     return this.data
   }
 }

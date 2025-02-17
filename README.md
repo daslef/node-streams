@@ -35,35 +35,3 @@ Enjoy! 🙃
 
 
 [➡️ GET STARTED](01-buffer-vs-stream/README.md).
-
-
-## Using Docker
-
-If you prefer to keep your environment clean and use Docker, you should be able to spin un a workable environment with Docker Compose by running:
-
-```bash
-docker-compose run workspace
-```
-
-If you use Docker, `npm install` is automatically run for you every time you launch the container.
-
-
-## Shameless plug 😇
-
-<a href="https://www.nodejsdesignpatterns.com"><img width="240" align="right" src="https://github.com/lmammino/lmammino/blob/master/nodejsdp.jpg?raw=true"></a>
-
-If you like this piece of work, consider supporting me by getting a copy of [Node.js Design Patterns, Third Edition](https://www.nodejsdesignpatterns.com/), which also goes into great depth about Streams and related design patterns.
-
-If you already have this book, **please consider writing a review** on Amazon, Packt, GoodReads or in any other review channel that you generally use. That would support us greatly 🙏.
-
-
-## Contributing
-
-In the spirit of Open Source, everyone is very welcome to contribute to this project.
-You can contribute just by submitting bugs or suggesting improvements by
-[opening an issue on GitHub](https://github.com/lmammino/streams-workshop/issues) or by [submitting a PR](https://github.com/lmammino/streams-workshop/pulls).
-
-
-## License
-
-Licensed under [MIT License](LICENSE). © Luciano Mammino.
